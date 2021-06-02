@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0908B37CB3DBC74347C45665 /* Pods_pruebaHiberus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA2862F80DE0BCA66B23CC9 /* Pods_pruebaHiberus.framework */; };
 		13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D1F266718B3005EEFCF /* AppDelegate.swift */; };
 		13756D24266718B3005EEFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* ViewController.swift */; };
 		13756D27266718B3005EEFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D25266718B3005EEFCF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaHiberus.release.xcconfig"; path = "Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus.release.xcconfig"; sourceTree = "<group>"; };
 		13756D1C266718B3005EEFCF /* pruebaHiberus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHiberus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13756D1F266718B3005EEFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13756D23266718B3005EEFCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		13756D28266718B5005EEFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13756D2B266718B5005EEFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13756D2D266718B5005EEFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA11FC3E8A7AE219D4FCB4E0 /* Pods-pruebaHiberus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaHiberus.debug.xcconfig"; path = "Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus.debug.xcconfig"; sourceTree = "<group>"; };
+		BEA2862F80DE0BCA66B23CC9 /* Pods_pruebaHiberus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pruebaHiberus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0908B37CB3DBC74347C45665 /* Pods_pruebaHiberus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A078868340C5DB5357515D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA11FC3E8A7AE219D4FCB4E0 /* Pods-pruebaHiberus.debug.xcconfig */,
+				034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		13756D13266718B3005EEFCF = {
 			isa = PBXGroup;
 			children = (
 				13756D1E266718B3005EEFCF /* pruebaHiberus */,
 				13756D1D266718B3005EEFCF /* Products */,
+				08A078868340C5DB5357515D /* Pods */,
+				BD00731C235D56828CB47DD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = pruebaHiberus;
 			sourceTree = "<group>";
 		};
+		BD00731C235D56828CB47DD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEA2862F80DE0BCA66B23CC9 /* Pods_pruebaHiberus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13756D30266718B5005EEFCF /* Build configuration list for PBXNativeTarget "pruebaHiberus" */;
 			buildPhases = (
+				6651A4B4D7901A43AE0C7B0E /* [CP] Check Pods Manifest.lock */,
 				13756D18266718B3005EEFCF /* Sources */,
 				13756D19266718B3005EEFCF /* Frameworks */,
 				13756D1A266718B3005EEFCF /* Resources */,
+				B7F6B938D4CFC23787BEC34E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6651A4B4D7901A43AE0C7B0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pruebaHiberus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7F6B938D4CFC23787BEC34E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13756D18266718B3005EEFCF /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		13756D31266718B5005EEFCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA11FC3E8A7AE219D4FCB4E0 /* Pods-pruebaHiberus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +369,7 @@
 		};
 		13756D32266718B5005EEFCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
