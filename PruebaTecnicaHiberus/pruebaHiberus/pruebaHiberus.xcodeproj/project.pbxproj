@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0908B37CB3DBC74347C45665 /* Pods_pruebaHiberus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA2862F80DE0BCA66B23CC9 /* Pods_pruebaHiberus.framework */; };
+		134733EF26672CCF00290B88 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134733EE26672CCF00290B88 /* ItemListViewController.swift */; };
+		134733F326672CF800290B88 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134733F226672CF800290B88 /* ItemList.storyboard */; };
 		13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D1F266718B3005EEFCF /* AppDelegate.swift */; };
-		13756D24266718B3005EEFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* ViewController.swift */; };
+		13756D24266718B3005EEFCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* MainViewController.swift */; };
 		13756D27266718B3005EEFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D25266718B3005EEFCF /* Main.storyboard */; };
 		13756D29266718B5005EEFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13756D28266718B5005EEFCF /* Assets.xcassets */; };
 		13756D2C266718B5005EEFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D2A266718B5005EEFCF /* LaunchScreen.storyboard */; };
@@ -17,9 +19,11 @@
 
 /* Begin PBXFileReference section */
 		034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaHiberus.release.xcconfig"; path = "Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus.release.xcconfig"; sourceTree = "<group>"; };
+		134733EE26672CCF00290B88 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		134733F226672CF800290B88 /* ItemList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
 		13756D1C266718B3005EEFCF /* pruebaHiberus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHiberus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13756D1F266718B3005EEFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13756D23266718B3005EEFCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13756D23266718B3005EEFCF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		13756D26266718B3005EEFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13756D28266718B5005EEFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13756D2B266718B5005EEFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,8 +50,32 @@
 				BA11FC3E8A7AE219D4FCB4E0 /* Pods-pruebaHiberus.debug.xcconfig */,
 				034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		134733E926672AEC00290B88 /* Presentacion */ = {
+			isa = PBXGroup;
+			children = (
+				13756D25266718B3005EEFCF /* Main.storyboard */,
+				134733F226672CF800290B88 /* ItemList.storyboard */,
+			);
+			path = Presentacion;
+			sourceTree = "<group>";
+		};
+		134733EB26672B2600290B88 /* Dominio */ = {
+			isa = PBXGroup;
+			children = (
+				13756D23266718B3005EEFCF /* MainViewController.swift */,
+				134733EE26672CCF00290B88 /* ItemListViewController.swift */,
+			);
+			path = Dominio;
+			sourceTree = "<group>";
+		};
+		134733EC26672B3100290B88 /* Datos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Datos;
 			sourceTree = "<group>";
 		};
 		13756D13266718B3005EEFCF = {
@@ -71,9 +99,10 @@
 		13756D1E266718B3005EEFCF /* pruebaHiberus */ = {
 			isa = PBXGroup;
 			children = (
+				134733EC26672B3100290B88 /* Datos */,
+				134733EB26672B2600290B88 /* Dominio */,
+				134733E926672AEC00290B88 /* Presentacion */,
 				13756D1F266718B3005EEFCF /* AppDelegate.swift */,
-				13756D23266718B3005EEFCF /* ViewController.swift */,
-				13756D25266718B3005EEFCF /* Main.storyboard */,
 				13756D28266718B5005EEFCF /* Assets.xcassets */,
 				13756D2A266718B5005EEFCF /* LaunchScreen.storyboard */,
 				13756D2D266718B5005EEFCF /* Info.plist */,
@@ -149,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13756D2C266718B5005EEFCF /* LaunchScreen.storyboard in Resources */,
+				134733F326672CF800290B88 /* ItemList.storyboard in Resources */,
 				13756D29266718B5005EEFCF /* Assets.xcassets in Resources */,
 				13756D27266718B3005EEFCF /* Main.storyboard in Resources */,
 			);
@@ -203,8 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13756D24266718B3005EEFCF /* ViewController.swift in Sources */,
+				13756D24266718B3005EEFCF /* MainViewController.swift in Sources */,
 				13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */,
+				134733EF26672CCF00290B88 /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
