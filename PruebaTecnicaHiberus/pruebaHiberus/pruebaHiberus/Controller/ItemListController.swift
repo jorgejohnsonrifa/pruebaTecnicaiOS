@@ -16,7 +16,8 @@ class ItemListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title =  "Lista de tarjetas"
-        self.registerTableViewCell()
+        showTableView(false)
+        registerTableViewCell()
         getListCard()
     }
     
@@ -25,14 +26,18 @@ class ItemListController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.cardsTableView.register(cell, forCellReuseIdentifier: "CardCell")
     }
     
+    func showTableView(_ value: Bool){
+        self.cardsTableView.isHidden = !value
+    }
+    
     // MARK: - Consume - web services
     func getListCard(){
         self.showHUD(self.view)
         serviceCard.getCardList { [self] (response, error) in
             if error == nil {
                 self.cardList = response?.cards ?? []
+                self.showTableView((self.cardList.count>0))
                 self.cardsTableView.reloadData()
-               
             }else {
                 self.showAlert(error, titulo: nil)
             }

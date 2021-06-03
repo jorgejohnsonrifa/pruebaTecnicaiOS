@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Response: Codable {
+struct CardResponse: Codable {
     
     let cards: [Card]?
 }
