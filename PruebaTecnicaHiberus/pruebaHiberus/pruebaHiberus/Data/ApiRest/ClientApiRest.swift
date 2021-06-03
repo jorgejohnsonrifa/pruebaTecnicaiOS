@@ -24,7 +24,6 @@ class ClientApiRest {
                                                    httpHeaders: [String: String]? = nil,
                                                    success: @escaping (_ response: Data?) -> Void,
                                                    failure: @escaping (_ error: String?) -> Void) {
-//        let headers = self.headers(httpHeaders, method: method)
         self.manager = self.getSessionManager()
         self.printJSONString(parameters, url)
         self.manager.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default,
@@ -64,7 +63,6 @@ class ClientApiRest {
                                    httpHeaders: [String: String]? = nil,
                                    success : @escaping (_ response: Data?)->Void,
                                    failure : @escaping (_ error : String?)->Void){
-//        let headers = self.headers(httpHeaders, method: method)
         self.manager = self.getSessionManager()
         self.manager.request(url, method: method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: nil, interceptor: nil, requestModifier: nil).responseData { (response) in
             if response.error == nil {
@@ -91,41 +89,13 @@ class ClientApiRest {
     static func loadImage (_ url:String ){
         self.manager.request(url).responseImage { (response) in
             debugPrint(response)
-
-            print(response.request)
-            print(response.response)
             debugPrint(response.result)
 
             if case .success(let image) = response.result {
                 print("image downloaded: \(image)")
             }
         }
-//        AF.request(url).responseImage { response in
-//            debugPrint(response)
-//
-//            print(response.request)
-//            print(response.response)
-//            debugPrint(response.result)
-//
-//            if case .success(let image) = response.result {
-//                print("image downloaded: \(image)")
-//            }
-//        }
-       
         
     }
-    /*static private func headers(_ others: [String: String]? = nil, method: HTTPMethod = .post) -> HTTPHeaders {
-        var headers: HTTPHeaders = ["OS": "IOS", "App-Credimax": "Credimax-iOS"]
-        if HTTPMethod.post == method {
-            headers["Content-Type"] = "application/json; charset=utf-8"
-            headers["Accept"] = "application/json"
-        }
-        if let values = others, !values.isEmpty {
-            for header in values {
-                headers[header.key] = header.value
-            }
-        }
-        return headers
-    }*/
     
 }

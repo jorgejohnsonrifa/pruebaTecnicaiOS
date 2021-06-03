@@ -34,25 +34,10 @@ class ItemListController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.cardsTableView.reloadData()
                
             }else {
-                self.showAlert("Ha ocurrido un error, intente más tarde", titulo: nil)
+                self.showAlert(error, titulo: nil)
             }
             self.hideHUD(self.view)
         }
-    }
-    
-    func loadImage(_ imageUrl : String){
-        ClientApiRest.loadImage(imageUrl)
-        
-    }
-    
-    
-    // MARK: - Alert
-    func showAlert(_ mensaje: String?, titulo: String?) {
-        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "Aceptar", style: .cancel, handler: { action in
-        })
-        alert.addAction(defaultAction)
-        present(alert, animated: true)
     }
     
     // MARK: - UITableView Delegate && DataSource
@@ -70,7 +55,20 @@ class ItemListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailController()
+        let card = cardList[indexPath.row]
+        vc.card = card
+        self.navigationController?.pushViewController(vc, animated: true)
         
+    }
+    
+    // MARK: - Alert
+    func showAlert(_ mensaje: String?, titulo: String?) {
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Aceptar", style: .cancel, handler: { action in
+        })
+        alert.addAction(defaultAction)
+        present(alert, animated: true)
     }
     
 

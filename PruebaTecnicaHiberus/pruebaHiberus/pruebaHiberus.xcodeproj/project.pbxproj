@@ -20,6 +20,8 @@
 		13732509266874AE00667062 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13732507266874AE00667062 /* CardCell.swift */; };
 		1373250A266874AE00667062 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13732508266874AE00667062 /* CardCell.xib */; };
 		1373251326687F4400667062 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373251226687F4400667062 /* Extension.swift */; };
+		137325192668864200667062 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137325182668864200667062 /* DetailController.swift */; };
+		1373251C2668873000667062 /* Detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1373251B2668873000667062 /* Detail.xib */; };
 		13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D1F266718B3005EEFCF /* AppDelegate.swift */; };
 		13756D24266718B3005EEFCF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* MainController.swift */; };
 		13756D27266718B3005EEFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D25266718B3005EEFCF /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		13732507266874AE00667062 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		13732508266874AE00667062 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		1373251226687F4400667062 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		137325182668864200667062 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		1373251B2668873000667062 /* Detail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Detail.xib; sourceTree = "<group>"; };
 		13756D1C266718B3005EEFCF /* pruebaHiberus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHiberus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13756D1F266718B3005EEFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13756D23266718B3005EEFCF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				137325062668748000667062 /* Cell */,
 				13756D25266718B3005EEFCF /* Main.storyboard */,
 				134733F226672CF800290B88 /* ItemList.storyboard */,
+				1373251B2668873000667062 /* Detail.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			children = (
 				13756D23266718B3005EEFCF /* MainController.swift */,
 				134733EE26672CCF00290B88 /* ItemListController.swift */,
+				137325182668864200667062 /* DetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				134733F326672CF800290B88 /* ItemList.storyboard in Resources */,
 				1373250A266874AE00667062 /* CardCell.xib in Resources */,
 				13756D29266718B5005EEFCF /* Assets.xcassets in Resources */,
+				1373251C2668873000667062 /* Detail.xib in Resources */,
 				13756D27266718B3005EEFCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +327,7 @@
 				132846B5266740AF0064DC8E /* CardListService.swift in Sources */,
 				1328469E266736EC0064DC8E /* ClientApiRest.swift in Sources */,
 				13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */,
+				137325192668864200667062 /* DetailController.swift in Sources */,
 				13732509266874AE00667062 /* CardCell.swift in Sources */,
 				132846AE26673E5C0064DC8E /* StringResource.swift in Sources */,
 				134733EF26672CCF00290B88 /* ItemListController.swift in Sources */,
