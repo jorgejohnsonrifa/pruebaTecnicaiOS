@@ -7,30 +7,39 @@
 
 import UIKit
 
-class ItemListController: UIViewController {
+class ItemListController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var cardsTableView: UITableView!
     let serviceCard = CardListService()
+    var cardList :[Card] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title =  "Lista de tarjetas"
+        self.registerTableViewCell()
         getListCard()
+    }
+    
+    private func registerTableViewCell() {
+        let cell = UINib(nibName: "CardCell", bundle: nil)
+        self.cardsTableView.register(cell, forCellReuseIdentifier: "CardCell")
     }
     
     // MARK: - Consume - web services
     func getListCard(){
-        serviceCard.getCardList { (response, error) in
+        self.showHUD(self.view)
+        serviceCard.getCardList { [self] (response, error) in
             if error == nil {
-                
-                let card =   response?.cards?.first
-                self.loadImage((card?.imageUrl)!)
-                self.showAlert(card?.name, titulo: nil)
+                self.cardList = response?.cards ?? []
+                self.cardsTableView.reloadData()
+               
             }else {
                 self.showAlert("Ha ocurrido un error, intente más tarde", titulo: nil)
             }
+            self.hideHUD(self.view)
         }
     }
+    
     func loadImage(_ imageUrl : String){
         ClientApiRest.loadImage(imageUrl)
         
@@ -46,14 +55,23 @@ class ItemListController: UIViewController {
         present(alert, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - UITableView Delegate && DataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cardList.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
+        let card = cardList[indexPath.row]
+        cell.lbName.text = card.name
+        cell.lbNanacost.text = card.manaCost
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 
 }

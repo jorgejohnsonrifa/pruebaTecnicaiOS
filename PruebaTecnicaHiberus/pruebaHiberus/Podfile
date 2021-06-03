@@ -8,5 +8,6 @@ target 'pruebaHiberus' do
   # Pods for pruebaHiberus
   pod 'Alamofire', '~> 5.2'
   pod 'AlamofireImage', '~> 4.1'
+  pod 'MBProgressHUD', '~> 1.2.0'
 
 end
