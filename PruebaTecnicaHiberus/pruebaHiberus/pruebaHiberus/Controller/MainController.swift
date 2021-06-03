@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tapIrPantalla2(_ sender: Any){
-        let vc = UIStoryboard.init(name: "ItemList", bundle: Bundle.main).instantiateViewController(withIdentifier: "ItemListViewController") as? ItemListViewController
+        let vc = UIStoryboard.init(name: "ItemList", bundle: Bundle.main).instantiateViewController(withIdentifier: "ItemListViewController") as? ItemListController
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }

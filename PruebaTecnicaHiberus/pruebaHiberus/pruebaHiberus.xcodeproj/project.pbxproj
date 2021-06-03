@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0908B37CB3DBC74347C45665 /* Pods_pruebaHiberus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA2862F80DE0BCA66B23CC9 /* Pods_pruebaHiberus.framework */; };
-		134733EF26672CCF00290B88 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134733EE26672CCF00290B88 /* ItemListViewController.swift */; };
+		1328469E266736EC0064DC8E /* ClientApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328469D266736EC0064DC8E /* ClientApiRest.swift */; };
+		132846A426673A860064DC8E /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846A326673A860064DC8E /* HTTPStatusCodes.swift */; };
+		132846A726673A980064DC8E /* ErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846A626673A980064DC8E /* ErrorUtil.swift */; };
+		132846AB26673D2B0064DC8E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846AA26673D2B0064DC8E /* Response.swift */; };
+		132846AE26673E5C0064DC8E /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846AD26673E5C0064DC8E /* StringResource.swift */; };
+		132846B5266740AF0064DC8E /* CardListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846B4266740AF0064DC8E /* CardListService.swift */; };
+		132846B8266745010064DC8E /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132846B7266745010064DC8E /* JsonUtil.swift */; };
+		134733EF26672CCF00290B88 /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134733EE26672CCF00290B88 /* ItemListController.swift */; };
 		134733F326672CF800290B88 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134733F226672CF800290B88 /* ItemList.storyboard */; };
 		13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D1F266718B3005EEFCF /* AppDelegate.swift */; };
-		13756D24266718B3005EEFCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* MainViewController.swift */; };
+		13756D24266718B3005EEFCF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13756D23266718B3005EEFCF /* MainController.swift */; };
 		13756D27266718B3005EEFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D25266718B3005EEFCF /* Main.storyboard */; };
 		13756D29266718B5005EEFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13756D28266718B5005EEFCF /* Assets.xcassets */; };
 		13756D2C266718B5005EEFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13756D2A266718B5005EEFCF /* LaunchScreen.storyboard */; };
@@ -19,11 +26,18 @@
 
 /* Begin PBXFileReference section */
 		034819CBECFEE8E389655C6C /* Pods-pruebaHiberus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pruebaHiberus.release.xcconfig"; path = "Target Support Files/Pods-pruebaHiberus/Pods-pruebaHiberus.release.xcconfig"; sourceTree = "<group>"; };
-		134733EE26672CCF00290B88 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		1328469D266736EC0064DC8E /* ClientApiRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientApiRest.swift; sourceTree = "<group>"; };
+		132846A326673A860064DC8E /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		132846A626673A980064DC8E /* ErrorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorUtil.swift; sourceTree = "<group>"; };
+		132846AA26673D2B0064DC8E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		132846AD26673E5C0064DC8E /* StringResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringResource.swift; sourceTree = "<group>"; };
+		132846B4266740AF0064DC8E /* CardListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListService.swift; sourceTree = "<group>"; };
+		132846B7266745010064DC8E /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
+		134733EE26672CCF00290B88 /* ItemListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListController.swift; sourceTree = "<group>"; };
 		134733F226672CF800290B88 /* ItemList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
 		13756D1C266718B3005EEFCF /* pruebaHiberus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHiberus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13756D1F266718B3005EEFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13756D23266718B3005EEFCF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		13756D23266718B3005EEFCF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		13756D26266718B3005EEFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13756D28266718B5005EEFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13756D2B266718B5005EEFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,29 +67,74 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		134733E926672AEC00290B88 /* Presentacion */ = {
+		132846A1266739D70064DC8E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				132846B7266745010064DC8E /* JsonUtil.swift */,
+				132846A626673A980064DC8E /* ErrorUtil.swift */,
+				132846A2266739E80064DC8E /* Constant */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		132846A2266739E80064DC8E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				132846A326673A860064DC8E /* HTTPStatusCodes.swift */,
+				132846AD26673E5C0064DC8E /* StringResource.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		132846A926673CFA0064DC8E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				132846AA26673D2B0064DC8E /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		132846B32667406B0064DC8E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				132846B4266740AF0064DC8E /* CardListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		134733E926672AEC00290B88 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				13756D25266718B3005EEFCF /* Main.storyboard */,
 				134733F226672CF800290B88 /* ItemList.storyboard */,
 			);
-			path = Presentacion;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		134733EB26672B2600290B88 /* Dominio */ = {
+		134733EB26672B2600290B88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13756D23266718B3005EEFCF /* MainViewController.swift */,
-				134733EE26672CCF00290B88 /* ItemListViewController.swift */,
+				13756D23266718B3005EEFCF /* MainController.swift */,
+				134733EE26672CCF00290B88 /* ItemListController.swift */,
 			);
-			path = Dominio;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		134733EC26672B3100290B88 /* Datos */ = {
+		134733EC26672B3100290B88 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				134733FC2667338200290B88 /* ApiRest */,
+				132846A926673CFA0064DC8E /* Response */,
 			);
-			path = Datos;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		134733FC2667338200290B88 /* ApiRest */ = {
+			isa = PBXGroup;
+			children = (
+				1328469D266736EC0064DC8E /* ClientApiRest.swift */,
+			);
+			path = ApiRest;
 			sourceTree = "<group>";
 		};
 		13756D13266718B3005EEFCF = {
@@ -99,9 +158,11 @@
 		13756D1E266718B3005EEFCF /* pruebaHiberus */ = {
 			isa = PBXGroup;
 			children = (
-				134733EC26672B3100290B88 /* Datos */,
-				134733EB26672B2600290B88 /* Dominio */,
-				134733E926672AEC00290B88 /* Presentacion */,
+				132846A1266739D70064DC8E /* Util */,
+				132846B32667406B0064DC8E /* Service */,
+				134733EC26672B3100290B88 /* Data */,
+				134733EB26672B2600290B88 /* Controller */,
+				134733E926672AEC00290B88 /* Presentation */,
 				13756D1F266718B3005EEFCF /* AppDelegate.swift */,
 				13756D28266718B5005EEFCF /* Assets.xcassets */,
 				13756D2A266718B5005EEFCF /* LaunchScreen.storyboard */,
@@ -233,9 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13756D24266718B3005EEFCF /* MainViewController.swift in Sources */,
+				132846A726673A980064DC8E /* ErrorUtil.swift in Sources */,
+				132846A426673A860064DC8E /* HTTPStatusCodes.swift in Sources */,
+				132846AB26673D2B0064DC8E /* Response.swift in Sources */,
+				13756D24266718B3005EEFCF /* MainController.swift in Sources */,
+				132846B5266740AF0064DC8E /* CardListService.swift in Sources */,
+				1328469E266736EC0064DC8E /* ClientApiRest.swift in Sources */,
 				13756D20266718B3005EEFCF /* AppDelegate.swift in Sources */,
-				134733EF26672CCF00290B88 /* ItemListViewController.swift in Sources */,
+				132846AE26673E5C0064DC8E /* StringResource.swift in Sources */,
+				134733EF26672CCF00290B88 /* ItemListController.swift in Sources */,
+				132846B8266745010064DC8E /* JsonUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
